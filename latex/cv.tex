@@ -1,0 +1,202 @@
+% From latex tutorial https://latex-tutorial.com/cv-latex-guide/
+
+\documentclass[12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext}
+\usepackage{tgpagella}
+
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=20mm,
+  top=15mm}
+
+\pagestyle{empty}
+
+\usepackage{sectsty}
+\sectionfont{%                        
+  \large
+  \fontfamily{qag}\selectfont
+  \sectionrule{0pt}{0pt}{-5pt}{1pt}
+}
+
+\newlength{\spacebox}
+\settowidth{\spacebox}{123456789}
+\newcommand{\sepspace}{\vspace*{1em}}
+
+\usepackage{hyperref}
+
+% macros %
+\newcommand{\name}[1]{
+  \Huge
+  \fontfamily{phv}\selectfont
+  \begin{center} \textbf{#1} \end{center}\par
+  \normalsize\normalfont}
+
+\newcommand{\motto}[1]{
+  \large
+  \fontfamily{phv}\selectfont
+  \begin{center} \textsl{#1}\end{center}\par
+  \normalsize \normalfont}
+
+\newcommand{\info}[2]{
+  \noindent
+  \parbox{6em}{\textsl{#1}} #2 \par}
+
+\newcommand{\skill}[2]{
+  \noindent
+  \parbox{3\spacebox}{\textsc{#1}} #2 \par} 
+
+\newcommand{\lan}[2]{
+  \noindent
+  \parbox{\spacebox}{\textbf{#1}} #2 \par}
+
+\newcommand{\education}[4]{
+  \noindent  \textbf{#1}
+  \hfill 
+  \framebox{
+    \parbox{6em}{%
+      \centering\textbf{#2}}} \par
+  \noindent \textit{#3} \par
+  \vspace*{0.5em}
+  \noindent \small #4 
+  \normalsize \par}
+
+\newcommand{\work}[4]{
+  \noindent  \textbf{#1}
+  \hfill 
+  \framebox{
+    \parbox{6em}{%
+      \centering\textbf{#2}}} \par
+  \noindent \textit{#3} \par
+  \vspace*{0.5em}
+  \noindent \small #4 
+  \normalsize \par}
+
+\begin{document}
+\name{Natan Camargos}
+\vspace*{-10pt}
+\motto{Desenvolvedor Senior}
+\sepspace
+\info{Email}{\href{mailto:natanscamargos@gmail.com}{\texttt{natanscamargos@gmail.com}} }
+\info{Celular}{\href{tel:+5585998056302}{+55 85 99805-6302}}
+\info{Linkedin}{\href{www.linkedin.com/in/natan-camargos-7b8153122}{www.linkedin.com/in/natan-camargos-7b8153122}}
+\info{Github}{\href{https://github.com/natancamargo}{https://github.com/natancamargo}}
+\info{Stackoverflow}{\href{https://stackoverflow.com/users/6489712/natan-camargos}{https://stackoverflow.com/users/6489712/natan-camargos}}
+
+\info{Endereço}{Rua Aldemir Jucá, 44, 60824-100, Fortaleza/Ceará}
+
+\section*{Experiência}
+\work
+{Beyond Soluções}
+{2022--2023}
+{Desenvolvedor Senior}
+{React.js $|$ Typescript $|$ Styled Components $|$ Storybook $|$ Jest $|$ RTL $|$ Cypress $|$
+Webpack\\
+Desenvolvimento e manutenção de bibliotecas e ferramentas de frontend para
+Português melhorar a experiência para o usuário final.
+}
+\sepspace
+\work
+{Fretebras}
+{2020--2021}
+{Desenvolvedor Senior}
+{React.js $|$ Styled Components $|$ Storybook $|$ Jest $|$ RTL $|$ Cypress $|$ Webpack\\
+Frontend na plataforma de risco da FreteBras, que oferece validação de
+motoristas através de OCR e consultas aos órgãos de trânsito brasileiros,
+de modo a estimar o risco associado com cada frete. Desenvolvimento de
+projetos cross-squads (e.g: Design System Components and CLI).
+}
+\sepspace
+\work
+{Hathor Network}
+{2020--2021}
+{Engenheiro de Software}
+{React.js $|$ React Native $|$ Electron $|$ Node.js $|$ Jest\\
+Contribuição no desenvolvimento das carteiras mobile e desktop, além de
+participação na construção de APIs e de bibliotecas no ecossistema Hathor.
+}
+\sepspace
+\work
+{Bitcoin.com}
+{2020--2021}
+{Engenheiro de Software}
+{React.js $|$ Node.js $|$ Bitcoin Cash\\
+Desenvolvimento de uma carteira de ativos para a blockchain do Bitcoin
+Cash. A carteira "Mint" foi criada durante um hackathon e atraiu bastante
+o interesse da comunidade. A carteira foi divulgada em vários artigos,
+incluindo os seguintes:
+\begin{itemize}
+  \item \href{https://news.bitcoin.com/how-to-create-custom-slp-tokens-with-the-bitcoin-com-mint/}
+{https://news.bitcoin.com/how-to-create-custom-slp-tokens-with-the-bitcoin-com-mint/}
+  \item \href{https://www.businesswire.com/news/home/20200213005745/en/Bitcoin.com-Launches-Mint-Token-Creation-
+Platform-Set}{https://www.businesswire.com/news/home/20200213005745/en/Bitcoin.com-Launches-Mint-Token-Creation-
+Platform-Set}
+}
+\end{itemize}
+\sepspace
+\work
+{Beyond Soluções}
+{2018--2020}
+{Desenvolvedor Senior}
+{React.js $|$ Styled Components $|$ Storybook $|$ Jest $|$ RTL $|$ Cypress $|$ Webpack $|$
+Node.js $|$ Express\\
+Na Beyond uma nova UX foi desenvolvida para o portal da corretora "Terra
+Investimentos", na época uma das dez mais importantes corretoras do Brazil.
+O portal foi criado a partir de um Design System concebido focando nos
+detalhes e usabilidade dos componentes mais simples até os mais complexos.
+}
+\sepspace
+\work
+{XP Investimentos}
+{2018--2019}
+{Desenvolvedor Frontend Pleno}
+{React.js $|$ Cypress\\
+Papel fundamental no desenvolvimento da nova UX dos produtos da squad de
+previdência, uma das mais relevantes squads da corretora, em parte devido
+ao debate social acerca da reforma da previdência na época. A entrega da
+nova experiência, que viabilizou contratações totalmente online resultou em
+aumento significativo para a custódia da corretora.
+}
+\sepspace
+\work
+{iFactory Solutions}
+{2015--2018}
+{Desenvolvedor Júnior}
+{Angular.js $|$ Java\\
+Desenvolvimento e manutenção do back office Hyatt (BOB - Back Office
+Board), responsável por centralizar todas as informações operacionais dos
+hotéis, ajudando a rotina diária dos funcionários e mantendo os gestores
+informados.
+}
+\sepspace
+\work
+{Grupo de Redes de Computadores, Engenharia de Software e\\
+Sistemas (GREat)}
+{2013--20114}
+{Desenvolvedor}
+{Android $|$ Java\\
+---
+}
+
+\section*{Educação}
+\education
+{Universidade Federal do Ceará}
+{2009--2013}
+{Engenharia de Teleinformática - Enfâse em Engenharia de Computação}{}
+
+\section*{Habilidades}
+\skill
+{Linguagens de programação}
+{Javascript, C/C++, Elisp, Java}
+\skill
+{Outros}
+{\textsl{CSS, HTML, Node, Ionic, Android, Markdown, Git, Emacs, Ubuntu}}
+
+\section*{Idiomas}
+\lan{Português}{Nativo}
+\lan{Inglês}{B2}
+
+\end{document}
