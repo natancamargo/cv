@@ -5,5 +5,5 @@
 Natan's CV made in latex and html.
 
 Curriculum latex
-- [./latex/cv.tex](cv.tex)
-- [./latex/cv.pdf](cv.pdf)
+- [cv.tex](./latex/cv.tex)
+- [cv.pdf](./latex/cv.pdf)
