@@ -4,9 +4,7 @@
 ## Curriculum Vitae
 Natan's CV made in latex and html.
 
-![oops](./screenshot/1.png)
-![oops](./screenshot/2.png)
-![oops](./screenshot/3.png)
+![oops](./screenshot.png)
 
 ### Curriculum Vitae latex
 #### Version 0
@@ -16,3 +14,7 @@ Natan's CV made in latex and html.
 #### Version 1
 - [cv-1.tex](./latex/cv-1.tex)
 - [cv-1.pdf](./latex/cv-1.pdf)
+
+#### Version 2 (best)
+- [cv-2.tex](./latex/cv-2.tex)
+- [cv-2.pdf](./latex/cv-2.pdf)
