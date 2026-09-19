@@ -1,56 +1,51 @@
-% tutorial from  https://texblog.org/2012/04/25/writing-a-cv-in-latex/
+% tutorial from https://www.youtube.com/watch?v=RyhQk8IoRV0
 
-\documentclass[10pt]{article}
+\documentclass{moderncv}
 
-\usepackage[margin=3cm]{geometry}
-
-\usepackage{hyperref}
-
-\usepackage{array, xcolor}
-\definecolor{lightgray}{gray}{0.8}
-\newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
-\newcolumntype{R}{p{0.8\textwidth}}
-\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
-
-\usepackage{lipsum}
-
-\pagestyle{empty}
-
-\newcommand{\info}[2]{
-  \noindent
-  \parbox{8em}{\textbf{#1}} #2 \par}
+\usepackage[scale=0.75]{geometry}
 
 \newcommand{\work}[4]{
-\textnormal{#2}&\textbf{#1}\\
-&\textnormal{#3}\\
-&\textnormal{#4}\\
+\cventry{#2}{#1}{}{}{}
+{
+  #3\\
+  #4
+}
 }
 
 \newcommand{\education}[2]{
-#1&#2\\
+\cvitem{#1}{#2}
 }
 
 \newcommand{\skill}[2]{
-#1&#2\\
-&\\
+\cvitem{#1}{#2}
 }
 
 \newcommand{\lang}[2]{
-#1&#2\\
+\cvlanguage{#1}{#2}{}
 }
 
+
+\newcommand{\info}[2]{
+\cvitem{#1}{#2}
+}
+
+
+\moderncvtheme[blue]{classic}
+
+\firstname{Natan}
+\familyname{Camargos}
+\title{Desenvolvedor Senior}
+
+\address{Rua Aldemir Jucá, 44}{608240-100 Fortaleza}{Ceará}
+\mobile{+55 85 998056302}
+\email{natanscamargos@gmail.com}
+% s\photo{}
+
 \begin{document}
-\part*{Natan Camargos}
+\maketitle
 
-\info{Email}{\href{mailto:natanscamargos@gmail.com}{\texttt{natanscamargos@gmail.com}} }
-\info{Celular}{\href{tel:+5585998056302}{+55 85 99805-6302}}
-\info{Endereço}{Rua Aldemir Jucá, 44, 60824-100, Fortaleza/Ceará}
-\info{Linkedin}{\href{www.linkedin.com/in/natan-camargos-7b8153122}{www.linkedin.com/in/natan-camargos-7b8153122}}
-\info{Github}{\href{https://github.com/natancamargo}{https://github.com/natancamargo}}
-\info{Stackoverflow}{\href{https://stackoverflow.com/users/6489712/natan-camargos}{https://stackoverflow.com/users/6489712/natan-camargos}}
+\section{Experiência}
 
-\section*{Experiência}
-\begin{tabular}{L!{\VRule}R}
 \work
 {Beyond Soluções}
 {2022--2023}
@@ -60,7 +55,7 @@ Webpack\newline
 Desenvolvimento e manutenção de bibliotecas e ferramentas de frontend para
 Português melhorar a experiência para o usuário final.
 }
-&\\
+
 \work
 {Fretebras}
 {2020--2021}
@@ -71,7 +66,7 @@ motoristas através de OCR e consultas aos órgãos de trânsito brasileiros,
 de modo a estimar o risco associado com cada frete. Desenvolvimento de
 projetos cross-squads (e.g: Design System Components and CLI).
 }
-&\\
+
 \work
 {Hathor Network}
 {2020--2021}
@@ -80,7 +75,7 @@ projetos cross-squads (e.g: Design System Components and CLI).
 Contribuição no desenvolvimento das carteiras mobile e desktop, além de
 participação na construção de APIs e de bibliotecas no ecossistema Hathor.
 }
-&\\
+
 \work
 {Bitcoin.com}
 {2020--2021}
@@ -98,28 +93,27 @@ Platform-Set}{https://www.businesswire.com/news/home/20200213005745/en/Bitcoin.c
 Platform-Set}
 \end{itemize}
 }
-\end{tabular}
 
 \section*{Educação}
-\begin{tabular}{L!{\VRule}R}
 \education{2009--2013}{
 Universidade Federal do Ceará\newline
 Engenharia de Teleinformática - Enfâse em Engenharia de Computação}
-\end{tabular}
 
 \section*{Habilidades}
-\begin{tabular}{L!{\VRule}R}
 \skill
 {Linguagens de programação}
 {Javascript, C/C++, Elisp, Java}
 \skill
 {Outros}
 {CSS, HTML, Node, Ionic, Android, Markdown, Git, Emacs, Ubuntu}
-\end{tabular}
 
 \section*{Idiomas}
-\begin{tabular}{L!{\VRule}R}
 \lang{Português}{Nativo}
 \lang{Inglês}{B2}
-\end{tabular}
+
+\section*{Links}
+\info{Linkedin}{\href{www.linkedin.com/in/natan-camargos-7b8153122}{www.linkedin.com/in/natan-camargos-7b8153122}}
+\info{Github}{\href{https://github.com/natancamargo}{https://github.com/natancamargo}}
+\info{Stackoverflow}{\href{https://stackoverflow.com/users/6489712/natan-camargos}{https://stackoverflow.com/users/6489712/natan-camargos}}
+
 \end{document}
